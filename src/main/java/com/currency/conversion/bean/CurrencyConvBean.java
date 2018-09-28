@@ -6,10 +6,13 @@ public class CurrencyConvBean {
 	private Long id;
 	private String from;
 	private String to;
-	private BigDecimal conversionMultiple;
+	private BigDecimal convMul;
 	private BigDecimal quantity;
 	private BigDecimal totalCalculatedAmount;
 	private int port;
+
+	public CurrencyConvBean() {
+	}
 
 	public Long getId() {
 		return id;
@@ -35,12 +38,12 @@ public class CurrencyConvBean {
 		this.to = to;
 	}
 
-	public BigDecimal getConversionMultiple() {
-		return conversionMultiple;
+	public BigDecimal getConvMul() {
+		return convMul;
 	}
 
-	public void setConversionMultiple(BigDecimal conversionMultiple) {
-		this.conversionMultiple = conversionMultiple;
+	public void setConvMul(BigDecimal convMul) {
+		this.convMul = convMul;
 	}
 
 	public BigDecimal getQuantity() {
@@ -71,7 +74,7 @@ public class CurrencyConvBean {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("CurrencyConvBean [id=").append(id).append(", from=").append(from).append(", to=").append(to)
-				.append(", conversionMultiple=").append(conversionMultiple).append(", quantity=").append(quantity)
+				.append(", convMul=").append(convMul).append(", quantity=").append(quantity)
 				.append(", totalCalculatedAmount=").append(totalCalculatedAmount).append(", port=").append(port)
 				.append("]");
 		return builder.toString();
@@ -83,7 +86,7 @@ public class CurrencyConvBean {
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.conversionMultiple = conversionMultiple;
+		this.convMul = conversionMultiple;
 		this.quantity = quantity;
 		this.totalCalculatedAmount = totalCalculatedAmount;
 		this.port = port;

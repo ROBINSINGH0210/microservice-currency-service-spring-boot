@@ -18,7 +18,7 @@ public class CurrencyConversionController {
 			@PathVariable BigDecimal quantity) {
 		CurrencyConvBean response = proxy.retrieveExchangeValue(from, to);
 		System.out.println("response " + response);
-		return new CurrencyConvBean(response.getId(), from, to, response.getConversionMultiple(), quantity,
-				quantity.multiply(response.getConversionMultiple()), response.getPort());
+		return new CurrencyConvBean(response.getId(), from, to, response.getConvMul(), quantity,
+				quantity.multiply(response.getConvMul()), response.getPort());
 	}
 }
